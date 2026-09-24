@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Enzo BENOIST-GIMET</title>
+  <link rel="icon" href="./Favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./CSS/projets.css">
+</head>
+<body>
+  <!-- Animated particles background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">Enzo BENOIST-GIMET</a>
+
+      <!-- Menu hamburger -->
+      <button class="menu-toggle" id="menuToggle">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="moi.html" class="nav-link">À propos</a></li>
+        <li><a href="etudes.html" class="nav-link">Études</a></li>
+        <li><a href="competences.html" class="nav-link">Compétences</a></li>
+        <li><a href="experience.html" class="nav-link">Expérience</a></li>
+        <li><a href="#" class="nav-link active">Projets</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-projects">
+      <div class="hero-projects-container">
+        <h1 class="hero-projects-title">Mes projets</h1>
+        <p class="hero-subtitle">Découvrez des réalisations utilisant des technologies diverses et variées</p>
+      </div>
+    </section>
+
+    <!-- Projects Stats -->
+    <div class="projects-stats">
+      <div class="stat-item">
+        <span class="stat-number" id="totalProjects">16</span>
+        <span class="stat-label">Projets</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="completedProjects">12</span>
+        <span class="stat-label">Terminés</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="technologiesUsed">8</span>
+        <span class="stat-label">Technologies</span>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <div class="search-icon">
+        <i class="fas fa-search"></i>
+      </div>
+      <input type="text" class="search-input" placeholder="Rechercher un projet..." id="searchInput">
+    </div>
+
+    <!-- Filter Navigation -->
+    <div class="filter-nav">
+      <button class="filter-btn active" data-target="all" title="Tous les projets">
+        <i class="fa-solid fa-house"></i>
+      </button>
+      <button class="filter-btn" data-target="tie" title="Projets professionnels">
+        <i class="fa-solid fa-user-tie"></i>
+      </button>
+      <button class="filter-btn" data-target="graduate" title="Projets académiques">
+        <i class="fa-solid fa-user-graduate"></i>
+      </button>
+      <button class="filter-btn" data-target="user" title="Projets personnels">
+        <i class="fa-solid fa-user"></i>
+      </button>
+      <button class="filter-btn" data-target="helmet" title="En cours">
+        <i class="fa-solid fa-helmet-safety"></i>
+      </button>
+      <button class="filter-btn" data-target="update" title="En cours d'amélioration">
+        <i class="fa-solid fa-wrench"></i>
+      </button>
+      <button class="filter-btn" data-target="pause" title="En pause">
+        <i class="fa-solid fa-pause"></i>
+      </button>
+      <button class="filter-btn" data-target="check" title="Terminé">
+        <i class="fa-solid fa-check"></i>
+      </button>
+    </div>
+
+    <!-- Projects Gallery -->
+    <section class="projects-gallery">
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project cards will be generated here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal améliorée -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header">
+        <h2 id="modal-title"></h2>
+        <div class="modal-project-tech" id="modal-tech"></div>
+      </div>
+      <p id="modal-description"></p>
+
+      <!-- Nouvelle section galerie -->
+    <div class="modal-gallery-section" id="modal-gallery-section" style="display: none;">
+      <h3 class="modal-gallery-title">
+        <i class="fas fa-images"></i>
+        Aperçu du projet
+      </h3>
+      
+      <div class="gallery-container">
+        <img id="gallery-main-image" class="gallery-main-image" src="" alt="Image du projet">
+        
+        <button class="gallery-nav prev" id="gallery-prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <button class="gallery-nav next" id="gallery-next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <div class="image-counter" id="image-counter">1 / 1</div>
+      </div>
+      
+      <div class="gallery-thumbnails" id="gallery-thumbnails">
+        <!-- Les miniatures seront générées ici -->
+      </div>
+    </div>
+
+    
+<!-- Section versions unifiée -->
+<div class="modal-version-section" id="modal-version-section" style="display: none;">
+  <h3 class="modal-version-title">
+    <i class="fas fa-code-branch"></i>
+    Informations de version
+  </h3>
+  
+  <div class="unified-version-container" id="unified-version-container">
+    <div class="version-tabs" id="version-tabs">
+      <!-- Les onglets seront générés dynamiquement -->
+    </div>
+    
+    <div class="version-content" id="version-content">
+      <!-- Le contenu sera généré dynamiquement -->
+    </div>
+  </div>
+</div>
+
+      <div id="modal-links" class="modal-links"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Enzo BENOIST-GIMET</p>
+  </footer>
+
+  <script src="./JS/projets.js"></script>
+</body>
+</html>
