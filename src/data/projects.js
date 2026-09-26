@@ -1,5 +1,5 @@
-// Project data avec informations détaillées
-    const projects = [
+export const projects =
+[
       {
         title: "Agenda interactif",
         description: "Création d'une application permettant de faciliter l'organisation du planning de l'utilisateur. Cette application propose une interface intuitive pour la gestion des tâches quotidiennes et des événements importants.",
@@ -7,25 +7,25 @@
         statusText: "Terminé",
         targets: ["all", "user", "check"],
         details: "Ce projet ambitieux vise à créer une solution complète de gestion du temps : l'application inclut des fonctionnalités diverses et variées comme une interface adaptative et l'ajout d'évènements personnalisables répartis en plusieurs catégories, afin de satisfaire les besoins de l'utilisateur.",
-        downloadApk: "./Fichiers/interactive_agenda_1.1.1.apk",
+        downloadApk: "/src/assets/Fichiers/interactive_agenda_1.1.1.apk",
         icon: "fas fa-calendar-alt",
         tech: "Flutter, Dart",
         hasMultipleVersions: false,
         images: [
         {
-          src: "./Images/Agenda/Accueil.jpg",
+          src: "/src/assets/Agenda/Accueil.jpg",
           alt: "Page d'accueil"
         },
         {
-          src: "./Images/Agenda/Evènement.jpg",
+          src: "/src/assets/Agenda/Evènement.jpg",
           alt: "Ajout d'un événement"
         },
         {
-          src: "./Images/Agenda/Vacances.jpg",
+          src: "/src/assets/Agenda/Vacances.jpg",
           alt: "Gestion des vacances"
         },
         {
-          src: "./Images/Agenda/Paramètres.jpg",
+          src: "/src/assets/Agenda/Paramètres.jpg",
           alt: "Paramètres"
         }
         ],
@@ -41,7 +41,7 @@
         statusText: "Terminé",
         targets: ["all", "graduate", "check"],
         details: "Ce projet académique combine développement web et desktop pour la gestion complète du cycle de vie des questionnaires. L'architecture modulaire permet la création flexible de tests via l'interface PHP, l'exportation standardisée des données XML, et la génération automatique d'interfaces de passation adaptées. Le système garantit la cohérence des données et l'interopérabilité entre les différents modules.",
-        subject: "./Fichiers/ALLIER TESTS.pdf",
+        subject: "/src/assets/Fichiers/ALLIER TESTS.pdf",
         download: "https://1drv.ms/f/s!AklTLE0n1rh5k4JZNGRKh3DZYcidYQ?e=GlScPy",
         icon: "fas fa-clipboard-list",
         tech: "PHP, XML, WinForms"
@@ -63,20 +63,20 @@
         statusText: "Terminé",
         targets: ["all", "graduate", "check"],
         details: "Ce projet académique, prenant la forme d'une application multimédia, exploite l'API The Movie Database (TMDB) pour offrir une expérience de découverte cinématographique enrichie. L'architecture intègre des fonctionnalités de recherche multicritères, la consultation détaillée des caractéristiques techniques et artistiques des œuvres, ainsi que la visualisation des bandes-annonces.",
-        subject: "./Fichiers/AP Banque de films.pdf",
+        subject: "/src/assets/Fichiers/AP Banque de films.pdf",
         icon: "fas fa-film",
         tech: "Xamarin.Forms, API REST",
         images: [
         {
-          src: "./Images/Films/Accueil.jpg",
+          src: "/src/assets/Films/Accueil.jpg",
           alt: "Page d'accueil"
         },
         {
-          src: "./Images/Films/Recherche.jpg",
+          src: "/src/assets/Films/Recherche.jpg",
           alt: "Recherche des films"
         },
         {
-          src: "./Images/Films/Fiche.jpg",
+          src: "/src/assets/Films/Fiche.jpg",
           alt: "Consultation d'un film"
         }
         ],
@@ -88,57 +88,57 @@
         statusText: "Terminé",
         targets: ["all", "graduate", "check"],
         details: "Ce projet académique vise à concevoir une solution robuste afin d'optimiser la gestion administrative du parc automobile d'une entreprise. Le système centralise toutes les informations des véhicules dans une interface unifiée, permettant le suivi en temps réel des cartes grises et l'ajout de nouvelles données. L'architecture garantit la sécurité des données sensibles et la conformité réglementaire.",
-        subject: "./Fichiers/AP Cartes Grises.pdf",
+        subject: "/src/assets/Fichiers/AP Cartes Grises.pdf",
         /*pictures: "https://1drv.ms/f/s!AklTLE0n1rh5h9RRGWc1f22c2_cfcQ?e=RO1a3S",*/
         icon: "fas fa-car",
         tech: "PHP, MySQL",
         images: [
           {
-            src: "./Images/Cartes Grises/Liste des modèles.png",
+            src: "/src/assets/Cartes Grises/Liste des modèles.png",
             alt: "Affichage de tous les modèles"
           },
           {
-            src: "./Images/Cartes Grises/Liste des propriétaires.png", 
+            src: "/src/assets/Cartes Grises/Liste des propriétaires.png",
             alt: "Affichage de tous les propriétaires"
           },
           {
-            src: "./Images/Cartes Grises/Liste des véhicules.png",
+            src: "/src/assets/Cartes Grises/Liste des véhicules.png",
             alt: "Affichage de tous les véhicules"
           },
           {
-            src: "./Images/Cartes Grises/Recherche d'un modèle.png",
+            src: "/src/assets/Cartes Grises/Recherche d'un modèle.png",
             alt: "Rechercher un modèle"
           },
           {
-            src: "./Images/Cartes Grises/Ajout d'un modèle (Partie 1).png",
+            src: "/src/assets/Cartes Grises/Ajout d'un modèle (Partie 1).png",
             alt: "Ajouter un modèle 1"
           },
           {
-            src: "./Images/Cartes Grises/Ajout d'un modèle (Partie 2).png", 
+            src: "/src/assets/Cartes Grises/Ajout d'un modèle (Partie 2).png",
             alt: "Ajouter un modèle 2"
           },
           {
-            src: "./Images/Cartes Grises/Ajout d'un propriétaire (Partie 1).png",
+            src: "/src/assets/Cartes Grises/Ajout d'un propriétaire (Partie 1).png",
             alt: "Ajouter un propriétaire 1"
           },
           {
-            src: "./Images/Cartes Grises/Ajout d'un propriétaire (Partie 2).png",
+            src: "/src/assets/Cartes Grises/Ajout d'un propriétaire (Partie 2).png",
             alt: "Ajouter un propriétaire 2"
           },
           {
-            src: "./Images/Cartes Grises/Ajout d'un véhicule (Partie 1).png",
+            src: "/src/assets/Cartes Grises/Ajout d'un véhicule (Partie 1).png",
             alt: "Ajouter un véhicule 1"
           },
           {
-            src: "./Images/Cartes Grises/Ajout d'un véhicule (Partie 2).png", 
+            src: "/src/assets/Cartes Grises/Ajout d'un véhicule (Partie 2).png",
             alt: "Ajouter un véhicule 2"
           },
           {
-            src: "./Images/Cartes Grises/Ajout d'un véhicule (Partie 3).png", 
+            src: "/src/assets/Cartes Grises/Ajout d'un véhicule (Partie 3).png",
             alt: "Ajouter un véhicule 3"
           },
           {
-            src: "./Images/Cartes Grises/Ajout d'un véhicule (Partie 4).png", 
+            src: "/src/assets/Cartes Grises/Ajout d'un véhicule (Partie 4).png",
             alt: "Ajouter un véhicule 4"
           }
         ]
@@ -150,37 +150,37 @@
         statusText: "Terminé",
         targets: ["all", "graduate", "check"],
         details: "Ce projet académique permet de développer une solution cryptographique complète basée sur l'algorithme de substitution polygrammique (chiffrement de César). L'implémentation utilise une architecture matricielle 5x5 pour l'application rigoureuse de l'algorithme, avec un système de gestion sécurisée des clés de chiffrement prédéfinies.",
-        subject: "./Fichiers/AP Logiciel de chiffrement.pdf",
+        subject: "/src/assets/Fichiers/AP Logiciel de chiffrement.pdf",
         //pictures: "https://1drv.ms/f/s!AklTLE0n1rh5h9QvIxFKgOmVlhXfIQ?e=S0JjeI",
         icon: "fas fa-lock",
         tech: "C#, Cryptographie",
         images: [
           {
-            src: "./Images/Chiffrement/Dépassement.png",
+            src: "/src/assets/Chiffrement/Dépassement.png",
             alt: "Test de dépassement"
           },
           {
-            src: "./Images/Chiffrement/RetoucheChaîne.png", 
+            src: "/src/assets/Chiffrement/RetoucheChaîne.png",
             alt: "Retoucher la chaîne"
           },
           {
-            src: "./Images/Chiffrement/Traiter (Partie 1).png",
+            src: "/src/assets/Chiffrement/Traiter (Partie 1).png",
             alt: "Traiter 1"
           },
           {
-            src: "./Images/Chiffrement/Traiter (Partie 2).png",
+            src: "/src/assets/Chiffrement/Traiter (Partie 2).png",
             alt: "Traiter 2"
           },
           {
-            src: "./Images/Chiffrement/Traiter (Partie 3).png",
+            src: "/src/assets/Chiffrement/Traiter (Partie 3).png",
             alt: "Traiter 3"
           },
           {
-            src: "./Images/Chiffrement/Traiter (Partie 4).png",
+            src: "/src/assets/Chiffrement/Traiter (Partie 4).png",
             alt: "Traiter 4"
           },
           {
-            src: "./Images/Chiffrement/Traiter (Partie 5).png",
+            src: "/src/assets/Chiffrement/Traiter (Partie 5).png",
             alt: "Traiter 5"
           }
         ]
@@ -208,7 +208,7 @@
         tech: "C++ (Arduino)",
         images: [
         {
-          src: "./Images/Circuit - Gaz.png",
+          src: "/src/assets/Circuit - Gaz.png",
           alt: "Connectiques du projet"
         }
         ],
@@ -230,75 +230,75 @@
         tech: "Réseau"
       },
       {
-        title: "Musée d'art des Célestins",
+        title: "Musee d'art des Célestins",
         description: "Développement d'un écosystème d'applications multiplateformes (console, desktop et mobile) pour la gestion et la consultation du catalogue d'œuvres d'art d'un musée. Le système propose des fonctionnalités avancées de recherche, tri et consultation des collections artistiques.",
         status: "completed",
         statusText: "Terminé",
         targets: ["all", "graduate", "check"],
         details: "Ce projet académique représente un système de gestion complet déployé sur de multiples plateformes technologiques pour répondre aux différents besoins d'usage. L'architecture intègre des fonctionnalités de tri multicritères (prix, artiste, époque historique) et exploite plusieurs collections de données artistiques enrichie avec métadonnées complètes. Différentes interfaces utilisateur sont disponibles selon le contexte d'utilisation, de la consultation rapide mobile à la gestion administrative desktop.",
-        subject: "./Fichiers/AP Musée CELESTINS.pdf",
+        subject: "/src/assets/Fichiers/AP Musee CELESTINS.pdf",
         download: "https://1drv.ms/f/s!AklTLE0n1rh5jsN--zIViJaJV_033Q?e=ioNDo2",
-        subjectTwo: "./Fichiers/AP Musée Célestins Mobile.pdf",
+        subjectTwo: "/src/assets/Fichiers/AP Musee Célestins Mobile.pdf",
         icon: "fas fa-palette",
         tech: "C#, WinForms, Xamarin.Forms",
         images: [
           {
-            src: "./Images/Musée/Accueil.jpg",
+            src: "/src/assets/Musee/Accueil.jpg",
             alt: "Ecran d'accueil"
           },
           {
-            src: "./Images/Musée/Epoques.jpg", 
+            src: "/src/assets/Musee/Epoques.jpg",
             alt: "Liste des époques"
           },
           {
-            src: "./Images/Musée/Artistes.jpg",
+            src: "/src/assets/Musee/Artistes.jpg",
             alt: "Liste des artistes"
           },
           {
-            src: "./Images/Musée/Menu.jpg",
+            src: "/src/assets/Musee/Menu.jpg",
             alt: "Résumé d'un artiste"
           },
           {
-            src: "./Images/Musée/Liste.jpg",
+            src: "/src/assets/Musee/Liste.jpg",
             alt: "Liste des oeuvres"
           },
           {
-            src: "./Images/Musée/Oeuvre.jpg",
+            src: "/src/assets/Musee/Oeuvre.jpg",
             alt: "Visuel d'une oeuvre"
           },
           {
-            src: "./Images/Musée/Biographie.jpg",
+            src: "/src/assets/Musee/Biographie.jpg",
             alt: "Biographie d'un artiste"
           }
         ]
       },
       {
-        title: "Pokédex Mobile",
+        title: "Pokedex Mobile",
         description: "Développement d'une application mobile interactive dédiée à l'univers Pokémon, exploitant l'API REST Tyradex pour la consultation complète des données des créatures. L'application propose une expérience immersive avec des fonctionnalités de recherche avancée et une interface inspirée des jeux officiels.",
         status: "completed",
         statusText: "Terminé",
         targets: ["all", "user", "check"],
-        details: "Cette application Android utilise l'API Tyradex pour offrir une expérience authentique aux fans de l'univers Pokémon. Le système intègre des fonctionnalités de recherche multicritères sophistiquées alignées sur les mécaniques des jeux officiels, une interface utilisateur immersive reproduisant fidèlement l'esthétique d'un véritable Pokédex, et une architecture optimisée pour la consultation fluide de grandes quantités de données. Le projet privilégie l'expérience utilisateur et la fidélité à l'univers original.",
+        details: "Cette application Android utilise l'API Tyradex pour offrir une expérience authentique aux fans de l'univers Pokémon. Le système intègre des fonctionnalités de recherche multicritères sophistiquées alignées sur les mécaniques des jeux officiels, une interface utilisateur immersive reproduisant fidèlement l'esthétique d'un véritable Pokedex, et une architecture optimisée pour la consultation fluide de grandes quantités de données. Le projet privilégie l'expérience utilisateur et la fidélité à l'univers original.",
         download: "https://github.com/EnzoBG03/pokedex-mobile",
-        downloadApk: "./Fichiers/com.apppokedex.apk",
+        downloadApk: "/src/assets/Fichiers/com.apppokedex.apk",
         icon: "fas fa-dragon",
         tech: "Xamarin.Forms, Tyradex, PokéAPI",
         hasMultipleVersions: false,
         images: [
           {
-            src: "./Images/Pokédex/Accueil.jpg",
+            src: "/src/assets/Pokedex/Accueil.jpg",
             alt: "Accueil de l'application"
           },
           {
-            src: "./Images/Pokédex/Nom.jpg", 
+            src: "/src/assets/Pokedex/Nom.jpg",
             alt: "Recherche par nom"
           },
           {
-            src: "./Images/Pokédex/Pikachu.jpg",
+            src: "/src/assets/Pokedex/Pikachu.jpg",
             alt: "Fiche de Pikachu"
           },
           {
-            src: "./Images/Pokédex/Dracaufeu.jpg",
+            src: "/src/assets/Pokedex/Dracaufeu.jpg",
             alt: "Fiche de Dracaufeu"
           }
         ],
@@ -316,65 +316,65 @@
         statusText: "Terminé",
         targets: ["all", "graduate", "check"],
         details: "Ce projet académique constitue une implémentation complète d'un jeu de poker professionnel respectant scrupuleusement les règles classiques, dotée d'une interface utilisateur immersive et d'un système de persistance des scores. L'architecture intègre des algorithmes hautement optimisés pour l'évaluation rapide et précise des combinaisons de mains, un moteur de jeu robuste gérant toutes les situations de partie, et un système de sauvegarde sécurisé. Le projet illustre l'expertise en développement de logiciels de divertissement interactifs.",
-        subject: "./Fichiers/AP POKER Console.pdf",
+        subject: "/src/assets/Fichiers/AP POKER Console.pdf",
         //pictures: "https://1drv.ms/f/s!AklTLE0n1rh5h9QS6A163AY9aQegpw?e=lsDJ8u",
         icon: "fa-solid fa-coins",
         tech: "C#, WinForms",
         images: [
           {
-            src: "./Images/Poker/AffichageCarte.png",
+            src: "/src/assets/Poker/AffichageCarte.png",
             alt: "Afficher la carte"
           },
           {
-            src: "./Images/Poker/CarteUnique.png", 
+            src: "/src/assets/Poker/CarteUnique.png",
             alt: "Garantir une carte unique"
           },
           {
-            src: "./Images/Poker/ChercheCombinaison (Partie 1).png",
+            src: "/src/assets/Poker/ChercheCombinaison (Partie 1).png",
             alt: "Calculer la combinaison 1"
           },
           {
-            src: "./Images/Poker/ChercheCombinaison (Partie 2).png",
+            src: "/src/assets/Poker/ChercheCombinaison (Partie 2).png",
             alt: "Calculer la combinaison 2"
           },
           {
-            src: "./Images/Poker/ChercheCombinaison (Partie 3).png",
+            src: "/src/assets/Poker/ChercheCombinaison (Partie 3).png",
             alt: "Calculer la combinaison 3"
           },
           {
-            src: "./Images/Poker/ChercheCombinaison (Partie 4).png",
+            src: "/src/assets/Poker/ChercheCombinaison (Partie 4).png",
             alt: "Calculer la combinaison 4"
           },
           {
-            src: "./Images/Poker/ChercheCombinaison (Partie 5).png",
+            src: "/src/assets/Poker/ChercheCombinaison (Partie 5).png",
             alt: "Calculer la combinaison 5"
           },
           {
-            src: "./Images/Poker/Echange.png",
+            src: "/src/assets/Poker/Echange.png",
             alt: "Echanger une carte"
           },
           {
-            src: "./Images/Poker/Enregistrer.png",
+            src: "/src/assets/Poker/Enregistrer.png",
             alt: "Enregistrer la combinaison obtenue"
           },
           {
-            src: "./Images/Poker/Résultat.png",
+            src: "/src/assets/Poker/Résultat.png",
             alt: "Afficher le résultat"
           },
           {
-            src: "./Images/Poker/Scores (Partie 1).png",
+            src: "/src/assets/Poker/Scores (Partie 1).png",
             alt: "Montrer les scores 1"
           },
           {
-            src: "./Images/Poker/Scores (Partie 2).png",
+            src: "/src/assets/Poker/Scores (Partie 2).png",
             alt: "Montrer les scores 2"
           },
           {
-            src: "./Images/Poker/TirageCarte.png",
+            src: "/src/assets/Poker/TirageCarte.png",
             alt: "Tirer une carte"
           },
           {
-            src: "./Images/Poker/TirageJeu.png",
+            src: "/src/assets/Poker/TirageJeu.png",
             alt: "Tirer une combinaison complète"
           }
         ],
@@ -390,25 +390,25 @@
         tech: "React Native, C#, ASP.NET, C++",
         images: [
           {
-            src: "./Images/Musique/Accueil.jpg",
+            src: "/src/assets/Musique/Accueil.jpg",
             alt: "Accueil de l'application"
           },
           {
-            src: "./Images/Musique/Scan.jpg",
+            src: "/src/assets/Musique/Scan.jpg",
             alt: "Lancement d'un scan"
           },
           {
-            src: "./Images/Musique/Historique.jpg",
+            src: "/src/assets/Musique/Historique.jpg",
             alt: "Consultation de l'historique"
           },
           {
-            src: "./Images/Musique/Fiche.jpg",
+            src: "/src/assets/Musique/Fiche.jpg",
             alt: "Consultation d'une musique scannée"
           }
         ],
       },
       {
-        title: "Rétrogaming",
+        title: "Retrogaming",
         description: "Conception et développement d'un site web moderne dédié à la culture rétrogaming, représentant une évolution sophistiquée du projet initial 'Site Web vitrine'. La plateforme explore l'univers du jeu vidéo rétro à travers une approche éditoriale et technique avancée.",
         status: "completed",
         statusText: "Terminé",
@@ -421,11 +421,11 @@
         hasMultipleVersions: false,
         images: [
           {
-            src: "./Images/Rétrogaming/Accueil.png",
+            src: "/src/assets/Retrogaming/Accueil.png",
             alt: "Accueil du site"
           },
           {
-            src: "./Images/Rétrogaming/Opinion.png",
+            src: "/src/assets/Retrogaming/Opinion.png",
             alt: "Découverte de mon opinion"
           }
         ],
@@ -450,11 +450,11 @@
         tech: "C#, WPF, React",
         images: [
           {
-            src: "./Images/RL/Accueil.png",
+            src: "/src/assets/RL/Accueil.png",
             alt: "Accueil du projet"
           },
           {
-            src: "./Images/RL/Saisie.png",
+            src: "/src/assets/RL/Saisie.png",
             alt: "Fenêtre de saisie"
           }
         ],
@@ -497,7 +497,7 @@
         statusText: "Terminé",
         targets: ["all", "graduate", "check"],
         details: "Ce projet académique, prenant la forme d'une solution professionnelle de gestion commerciale intégrale dotée d'une architecture modulaire haute performance, supporte à la fois les bases de données MySQL traditionnelles et les services web REST modernes. L'écosystème fonctionnel comprend un module complet de gestion client/fournisseur, un système de catalogue produits dynamique, et un générateur automatisé de factures respectant les normes comptables. L'interface ergonomique privilégie la lisibilité des données et l'efficacité opérationnelle, permettant une adoption rapide par les équipes métier.",
-        subject: "./Fichiers/AP Vichy Papeterie.pdf",
+        subject: "/src/assets/Fichiers/AP Vichy Papeterie.pdf",
         download: "https://1drv.ms/f/s!AklTLE0n1rh5lItwPDGe-_CVR-pieQ?e=3jlULf",
         icon: "fas fa-receipt",
         tech: "C#, MySQL, API REST, WPF"
@@ -522,566 +522,5 @@
         icon: "fas fa-dice-five",
         tech: "Unreal Engine"
       }
-    ];
+];
 
-    class ImageGallery {
-  constructor(images) {
-    this.images = images || [];
-    this.currentIndex = 0;
-    this.elements = {
-      section: document.getElementById('modal-gallery-section'),
-      mainImage: document.getElementById('gallery-main-image'),
-      thumbnails: document.getElementById('gallery-thumbnails'),
-      counter: document.getElementById('image-counter'),
-      prevBtn: document.getElementById('gallery-prev'),
-      nextBtn: document.getElementById('gallery-next')
-    };
-    
-    this.initEventListeners();
-  }
-  
-  initEventListeners() {
-    this.elements.prevBtn.addEventListener('click', () => this.previousImage());
-    this.elements.nextBtn.addEventListener('click', () => this.nextImage());
-    
-    // Navigation au clavier
-    document.addEventListener('keydown', (e) => {
-      if (this.elements.section.style.display !== 'none') {
-        if (e.key === 'ArrowLeft') this.previousImage();
-        if (e.key === 'ArrowRight') this.nextImage();
-      }
-    });
-  }
-  
-  load(images) {
-    this.images = images || [];
-    this.currentIndex = 0;
-    
-    if (this.images.length === 0) {
-      this.elements.section.style.display = 'none';
-      return;
-    }
-    
-    this.elements.section.style.display = 'block';
-    this.renderThumbnails();
-    this.showImage(0);
-  }
-  
-  renderThumbnails() {
-    this.elements.thumbnails.innerHTML = '';
-    
-    this.images.forEach((image, index) => {
-      const thumbnail = document.createElement('img');
-      thumbnail.src = image.src;
-      thumbnail.alt = image.alt || `Image ${index + 1}`;
-      thumbnail.className = 'thumbnail';
-      thumbnail.addEventListener('click', () => this.showImage(index));
-      
-      this.elements.thumbnails.appendChild(thumbnail);
-    });
-  }
-  
-  showImage(index) {
-    if (index < 0 || index >= this.images.length) return;
-    
-    this.currentIndex = index;
-    const image = this.images[index];
-    
-    this.elements.mainImage.src = image.src;
-    this.elements.mainImage.alt = image.alt || `Image ${index + 1}`;
-    this.elements.counter.textContent = `${index + 1} / ${this.images.length}`;
-    
-    // Mettre à jour les miniatures actives
-    const thumbnails = this.elements.thumbnails.querySelectorAll('.thumbnail');
-    thumbnails.forEach((thumb, i) => {
-      thumb.classList.toggle('active', i === index);
-    });
-    
-    // Gérer la visibilité des boutons de navigation
-    this.elements.prevBtn.style.display = this.images.length > 1 ? 'flex' : 'none';
-    this.elements.nextBtn.style.display = this.images.length > 1 ? 'flex' : 'none';
-  }
-  
-  previousImage() {
-    const newIndex = this.currentIndex > 0 ? this.currentIndex - 1 : this.images.length - 1;
-    this.showImage(newIndex);
-  }
-  
-  nextImage() {
-    const newIndex = this.currentIndex < this.images.length - 1 ? this.currentIndex + 1 : 0;
-    this.showImage(newIndex);
-  }
-}
-
-    // Particles Animation
-    function createParticles() {
-      const particlesContainer = document.getElementById('particles');
-      const particleCount = 50;
-
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 20 + 's';
-        particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-        particlesContainer.appendChild(particle);
-      }
-    }
-
-    // Menu hamburger functionality
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
-        menuToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-      }
-    });
-
-    // Create project card
-    /*function createProjectCard(project) {
-      const statusClass = `status-${project.status}`;
-      
-      return `
-        <div class="project-card" data-target="${project.targets.join(',')}" data-project='${JSON.stringify(project).replace(/'/g, "&apos;")}'>
-          <div class="project-header">
-            <div class="project-icon">
-              <i class="${project.icon}"></i>
-            </div>
-            <div class="project-info">
-              <h3 class="project-title">${project.title}</h3>
-              <div class="project-description">${project.description}</div>
-            </div>
-          </div>
-          <div class="project-footer">
-            <div class="project-status ${statusClass}">
-              ${project.statusText}
-            </div>
-            <div class="project-tech">
-              ${project.tech}
-            </div>
-          </div>
-        </div>
-      `;
-    }*/
-   function createProjectCard(project) {
-  let statusClass, statusText, targets;
-  
-  if (project.isBeingUpdated) {
-    statusClass = 'status-updating';
-    statusText = 'En amélioration';
-    targets = [...project.targets, 'update'].join(',');
-  } else {
-    statusClass = `status-${project.status}`;
-    statusText = project.statusText;
-    targets = project.targets.join(',');
-  }
-  
-  return `
-    <div class="project-card" data-target="${targets}" data-project='${JSON.stringify(project).replace(/'/g, "&apos;")}'>
-      <div class="project-header">
-        <div class="project-icon">
-          <i class="${project.icon}"></i>
-        </div>
-        <div class="project-info">
-          <h3 class="project-title">${project.title}</h3>
-          <div class="project-description">${project.description}</div>
-        </div>
-      </div>
-      <div class="project-footer">
-        <div class="project-status ${statusClass}">
-          ${statusText}
-        </div>
-        <div class="project-tech">
-          ${project.tech}
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-    // Initialize projects
-    function initProjects() {
-      const grid = document.getElementById('projectsGrid');
-      const projectCards = projects.map(createProjectCard).join('');
-      grid.innerHTML = projectCards;
-      
-      // Update stats
-      updateStats();
-    }
-
-    // Update statistics
-    function updateStats() {
-      const total = projects.length;
-      const completed = projects.filter(p => p.status === 'completed').length;
-      const technologies = new Set();
-      
-      projects.forEach(p => {
-        if (p.tech) {
-          p.tech.split(', ').forEach(tech => technologies.add(tech));
-        }
-      });
-      
-      document.getElementById('totalProjects').textContent = total;
-      document.getElementById('completedProjects').textContent = completed;
-      document.getElementById('technologiesUsed').textContent = technologies.size/* + '+'*/;
-    }
-
-    // Filter functionality
-    function initFilters() {
-      const filterButtons = document.querySelectorAll('.filter-btn');
-      const projectCards = document.querySelectorAll('.project-card');
-
-      filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          // Update active button
-          filterButtons.forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
-
-          const targetFilter = button.getAttribute('data-target');
-
-          // Filter projects
-          document.querySelectorAll('.project-card').forEach(card => {
-            const cardTargets = card.getAttribute('data-target').split(',');
-            if (targetFilter === 'all' || cardTargets.includes(targetFilter)) {
-              card.style.display = 'flex';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-
-          // Update stats based on visible projects
-          updateFilteredStats(targetFilter);
-        });
-      });
-    }
-
-    // Update stats for filtered view
-    function updateFilteredStats(filter) {
-      let filteredProjects = projects;
-      
-      if (filter !== 'all') {
-        filteredProjects = projects.filter(p => p.targets.includes(filter));
-      }
-      
-      const total = filteredProjects.length;
-      const completed = filteredProjects.filter(p => p.status === 'completed').length;
-      const technologies = new Set();
-      
-      filteredProjects.forEach(p => {
-        if (p.tech) {
-          p.tech.split(', ').forEach(tech => technologies.add(tech));
-        }
-      });
-      
-      document.getElementById('totalProjects').textContent = total;
-      document.getElementById('completedProjects').textContent = completed;
-      document.getElementById('technologiesUsed').textContent = technologies.size/* + (technologies.size > 0 ? '+' : '')*/;
-    }
-
-    // Search functionality
-    function initSearch() {
-      const searchInput = document.getElementById('searchInput');
-      
-      searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        
-        document.querySelectorAll('.project-card').forEach(card => {
-          const projectData = JSON.parse(card.getAttribute('data-project').replace(/&apos;/g, "'"));
-          const searchableText = `${projectData.title} ${projectData.description} ${projectData.tech || ''} ${projectData.details || ''}`.toLowerCase();
-          
-          if (searchTerm === '' || searchableText.includes(searchTerm)) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-        
-        // Reset filter buttons when searching
-        if (searchTerm) {
-          document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-          document.querySelector('.filter-btn[data-target="all"]').classList.add('active');
-        }
-      });
-    }
-
-    // Fonction pour générer le contenu d'une version - VERSION UNIFIÉE
-function generateVersionContent(versionData) {
-  const hasNextVersion = versionData.nextVersion && versionData.nextVersionFeatures;
-  const nextVersionClass = hasNextVersion ? '' : 'no-update';
-  const nextVersionNumber = versionData.nextVersion || 'Aucune';
-  const nextVersionFeatures = versionData.nextVersionFeatures || 'Aucune mise à jour majeure prévue pour le moment : cette version est considérée comme stable.';
-  
-  return `
-    <div class="version-details-card">
-      <div class="version-current">
-        <div class="version-header">
-          <h4>Version actuelle</h4>
-          <span class="version-number">${versionData.currentVersion}</span>
-        </div>
-        <p class="version-description">${versionData.versionDetails}</p>
-      </div>
-      
-      <div class="version-divider">
-        <i class="fas fa-arrow-right"></i>
-      </div>
-      
-      <div class="version-next ${nextVersionClass}">
-        <div class="version-header">
-          <h4>Prochaine version</h4>
-          <span class="version-number next ${nextVersionClass}">${nextVersionNumber}</span>
-        </div>
-        <p class="version-description ${nextVersionClass}">${nextVersionFeatures}</p>
-      </div>
-    </div>
-  `;
-}
-
-    // Instance globale de la galerie
-const imageGallery = new ImageGallery();
-
-    // Modal functionality - VERSION COMPLÈTEMENT UNIFIÉE
-function initModal() {
-  const modal = document.getElementById('modal');
-  const modalTitle = document.getElementById('modal-title');
-  const modalTech = document.getElementById('modal-tech');
-  const modalDescription = document.getElementById('modal-description');
-  const modalLinks = document.getElementById('modal-links');
-  const closeBtn = document.querySelector('.close');
-
-  // Fonction pour créer un système de versions unifié
-  function createUnifiedVersionSystem(projectData) {
-    const versionSection = document.getElementById('modal-version-section');
-    const versionContainer = document.getElementById('unified-version-container');
-    const versionTabs = document.getElementById('version-tabs');
-    const versionContent = document.getElementById('version-content');
-    
-    // Nettoyer le contenu précédent
-    versionTabs.innerHTML = '';
-    versionContent.innerHTML = '';
-    
-    let versions = {};
-    
-    if (projectData.hasMultipleVersions && projectData.versions) {
-      // Cas des versions multiples
-      versions = projectData.versions;
-    } else if (projectData.currentVersion) {
-      // Cas d'une version unique - créer un objet version standardisé
-      versions = {
-        main: {
-          name: "Version principale",
-          currentVersion: projectData.currentVersion,
-          versionDetails: projectData.versionDetails || 'Aucune information disponible',
-          nextVersion: projectData.nextVersion,
-          nextVersionFeatures: projectData.nextVersionFeatures
-        }
-      };
-    } else {
-      // Aucune information de version
-      return false;
-    }
-    
-    // Créer les onglets
-    Object.keys(versions).forEach((versionKey, index) => {
-      const versionData = versions[versionKey];
-      const tab = document.createElement('button');
-      tab.className = `version-tab ${index === 0 ? 'active' : ''}`;
-      tab.dataset.version = versionKey;
-      
-      // Déterminer l'icône selon le type de version
-      let icon = 'fas fa-code';
-      if (versionKey.includes('react') || versionData.name.toLowerCase().includes('react')) {
-        icon = 'fab fa-react';
-      } else if (versionKey.includes('csharp') || versionKey.includes('c#') || versionData.name.toLowerCase().includes('c#')) {
-        icon = 'fas fa-desktop';
-      } else if (versionKey.includes('mobile') || versionData.name.toLowerCase().includes('mobile')) {
-        icon = 'fas fa-mobile-alt';
-      } else if (versionKey.includes('web') || versionData.name.toLowerCase().includes('web')) {
-        icon = 'fas fa-globe';
-      } else if (versionKey === 'main') {
-        icon = 'fas fa-star';
-      }
-      
-      tab.innerHTML = `<i class="${icon}"></i> ${versionData.name}`;
-      versionTabs.appendChild(tab);
-      
-      // Ajouter l'event listener
-      tab.addEventListener('click', () => {
-        // Retirer la classe active de tous les onglets
-        document.querySelectorAll('.version-tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        
-        // Afficher le contenu de la version sélectionnée
-        versionContent.innerHTML = generateVersionContent(versions[versionKey]);
-      });
-    });
-    
-    // Initialiser avec la première version
-    const firstVersionKey = Object.keys(versions)[0];
-    versionContent.innerHTML = generateVersionContent(versions[firstVersionKey]);
-    
-    return true;
-  }
-
-  // Fonction pour ouvrir la modal
-  function openModal(projectData) {
-    modalTitle.textContent = projectData.title;
-    modalTech.textContent = projectData.tech;
-    modalDescription.textContent = projectData.details || projectData.description;
-
-    // Supprimer toute info de mise à jour précédente
-const existingUpdate = document.querySelector('.modal-update-info');
-if (existingUpdate) {
-  existingUpdate.remove();
-}
-
-// Affichage des informations de mise à jour si applicable
-if (projectData.isBeingUpdated && projectData.updateDetails) {
-  const updateInfo = document.createElement('div');
-  updateInfo.className = 'modal-update-info';
-  updateInfo.innerHTML = `
-    <div class="update-banner">
-      <i class="fas fa-wrench"></i>
-      <strong>Projet en cours d'amélioration</strong> ${projectData.updateDetails}
-    </div>
-  `;
-  modalDescription.parentNode.insertBefore(updateInfo, modalDescription.nextSibling);
-}
-    
-    // Charger les images dans la galerie
-    imageGallery.load(projectData.images);
-
-    // Gestion des informations de version pour les projets personnels
-    const versionSection = document.getElementById('modal-version-section');
-    
-    if (projectData.targets && projectData.targets.includes('user')) {
-      // Tenter de créer le système de versions unifié
-      const hasVersions = createUnifiedVersionSystem(projectData);
-      
-      if (hasVersions) {
-        versionSection.style.display = 'block';
-      } else {
-        versionSection.style.display = 'none';
-      }
-    } else {
-      versionSection.style.display = 'none';
-    }
-
-    // Create links avec icônes
-    modalLinks.innerHTML = '';
-    
-    const linkConfig = [
-      { key: 'subject', text: 'Voir le sujet', icon: 'fas fa-file-pdf' },
-      { key: 'subjectTwo', text: 'Voir le second sujet', icon: 'fas fa-file-pdf' },
-      { key: 'link', text: 'Voir le projet en ligne', icon: 'fas fa-external-link-alt' },
-      { key: 'linkReact', text: 'Version React', icon: 'fab fa-react' },
-      { key: 'download', text: 'Télécharger les fichiers', icon: 'fas fa-download' },
-      { key: 'downloadCsharp', text: 'Code C#', icon: 'fab fa-github' },
-      { key: 'downloadReact', text: 'Code React', icon: 'fab fa-github' },
-      { key: 'pictures', text: 'Voir les captures', icon: 'fas fa-images' },
-      { key: 'downloadApk', text: 'Fichier APK', icon: 'fas fa-mobile-android-alt' }
-    ];
-
-    let hasLinks = false;
-    linkConfig.forEach(config => {
-      if (projectData[config.key]) {
-        modalLinks.innerHTML += `
-          <a href="${projectData[config.key]}" class="modal-link" target="_blank">
-            <i class="${config.icon}"></i>
-            ${config.text}
-          </a>
-        `;
-        hasLinks = true;
-      }
-    });
-    
-    if (!hasLinks) {
-      modalLinks.innerHTML = '<div class="modal-no-data">Aucun lien disponible pour ce projet</div>';
-    }
-
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-    
-    // Animation d'entrée
-    requestAnimationFrame(() => {
-      modal.style.opacity = '1';
-    });
-  }
-
-  // Fonction pour fermer la modal
-  function closeModal() {
-    modal.style.opacity = '0';
-    setTimeout(() => {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }, 300);
-  }
-
-  // Event listener pour les cartes de projet
-  document.addEventListener('click', (e) => {
-    const projectCard = e.target.closest('.project-card');
-    if (projectCard) {
-      e.preventDefault();
-      const projectDataStr = projectCard.getAttribute('data-project').replace(/&apos;/g, "'");
-      const projectData = JSON.parse(projectDataStr);
-      openModal(projectData);
-    }
-  });
-
-  // Fermer la modal avec le bouton X
-  closeBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    closeModal();
-  });
-
-  // Fermer la modal en cliquant en dehors
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  // Fermer la modal avec la touche Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.style.display === 'flex') {
-      closeModal();
-    }
-  });
-}
-
-    // Header scroll effect
-    function initScrollEffect() {
-      window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header');
-        if (window.scrollY > 100) {
-          header.style.background = 'rgba(15, 15, 35, 0.95)';
-        } else {
-          header.style.background = 'rgba(15, 15, 35, 0.8)';
-        }
-      });
-    }
-
-    // Initialize everything
-    document.addEventListener('DOMContentLoaded', () => {
-      createParticles();
-      initProjects();
-      initFilters();
-      initSearch();
-      initModal();
-      initScrollEffect();
-    });

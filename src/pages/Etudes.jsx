@@ -1,34 +1,37 @@
-
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import Layout from '../components/Layout';
+import { getAssetUrl } from '../utils/assetHelper';
 import '../styles/etudes.css';
 
 export default function Etudes() {
+  const timelineRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!timelineRef.current) return;
+      const timelineItems = timelineRef.current.querySelectorAll('.timeline-item');
+
+      timelineItems.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+        if (isVisible) {
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0)';
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // Trigger once on mount
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <>
-      <div className="particles" id="particles"></div>
-
-      <header className="header">
-        <nav className="nav-container">
-          <Link to="/" className="logo">Enzo BENOIST-GIMET</Link>
-
-          <button className="menu-toggle" id="menuToggle">
-            <span className="hamburger"></span>
-            <span className="hamburger"></span>
-            <span className="hamburger"></span>
-          </button>
-
-          <ul className="nav-menu" id="navMenu">
-            <li><Link to="/" className="nav-link">Accueil</Link></li>
-            <li><Link to="/moi" className="nav-link">À propos</Link></li>
-            <li><Link to="/etudes" className="nav-link active">Études</Link></li>
-            <li><Link to="/competences" className="nav-link">Compétences</Link></li>
-            <li><Link to="/experience" className="nav-link">Expérience</Link></li>
-            <li><Link to="/projets" className="nav-link">Projets</Link></li>
-            <li><Link to="/contact" className="nav-link">Contact</Link></li>
-          </ul>
-        </nav>
-      </header>
-
+    <Layout>
       <main className="main-content">
         <section className="hero-studies">
           <div className="hero-studies-container">
@@ -50,7 +53,7 @@ export default function Etudes() {
             <div className="hero-studies-visual">
               <div className="hero-studies-image">
                 <div style={{ width: '90%', height: '90%', borderRadius: '50%', background: 'var(--bg-dark)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '4rem', position: 'relative', zIndex: 2, color: 'var(--accent-color)' }}>
-                  <img src="./Images/moi3.png" style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} alt="Moi" />
+                  <img src={getAssetUrl('/src/assets/moi3.png')} style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} alt="Moi" />
                 </div>
               </div>
             </div>
@@ -59,8 +62,8 @@ export default function Etudes() {
 
         <section className="timeline-section">
           <div className="section-container">
-            <div className="timeline">
-              <div className="timeline-item">
+            <div className="timeline" ref={timelineRef}>
+              <div className="timeline-item" style={{ opacity: 0, transform: 'translateY(50px)', transition: 'all 0.6s ease' }}>
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <h4>Baccalauréat général (2020-2023)</h4>
@@ -73,12 +76,12 @@ export default function Etudes() {
                 </div>
               </div>
 
-              <div className="timeline-item">
+              <div className="timeline-item" style={{ opacity: 0, transform: 'translateY(50px)', transition: 'all 0.6s ease' }}>
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <h4>BTS SIO (2023-2025)</h4>
                   <p>Lycées Albert Londres - Cusset</p>
-                  <p>Spécialité choisie : <a className="section-link" href="./Fichiers/Plaquette SLAM.pdf" target="_blank" rel="noreferrer">SLAM</a></p>
+                  <p>Spécialité choisie : <a className="section-link" href={getAssetUrl('/src/assets/Fichiers/Plaquette SLAM.pdf')} target="_blank" rel="noreferrer">SLAM</a></p>
                   <p>Membre du programme IngéPLUS proposé par Clermont Auvergne INP</p>
                   <div className="timeline-buttons">
                     <a href="https://albert-londres-cusset.ent.auvergnerhonealpes.fr/orientation-formations/enseignement-superieur-bts-/bts-services-informatiques-aux-organisations-sio-/" target="_blank" rel="noreferrer" className="timeline-btn">En savoir plus</a>
@@ -87,7 +90,7 @@ export default function Etudes() {
                 </div>
               </div>
 
-              <div className="timeline-item">
+              <div className="timeline-item" style={{ opacity: 0, transform: 'translateY(50px)', transition: 'all 0.6s ease' }}>
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <h4>Formation d'ingénieur en informatique par apprentissage (Depuis 2025)</h4>
@@ -102,10 +105,6 @@ export default function Etudes() {
           </div>
         </section>
       </main>
-
-      <footer className="footer">
-        <p>&copy; 2026 Enzo BENOIST-GIMET</p>
-      </footer>
-    </>
+    </Layout>
   );
 }
