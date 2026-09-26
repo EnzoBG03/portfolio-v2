@@ -1,39 +1,35 @@
-
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import Layout from '../components/Layout';
+import { getAssetUrl } from '../utils/assetHelper';
 import '../styles/contact.css';
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    entreprise: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Intégrer la logique d'envoi du formulaire ici si nécessaire
+    const formattedText = `${formData.message}
+
+Nom : ${formData.name}
+Entreprise : ${formData.entreprise}
+Email : ${formData.email}`;
+
+    const mailtoLink = `mailto:enzo.benoist-gimet@outlook.fr?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(formattedText)}`;
+    window.location.href = mailtoLink;
   };
 
   return (
-    <>
-      <div className="particles" id="particles"></div>
-
-      <header className="header">
-        <nav className="nav-container">
-          <Link to="/" className="logo">Enzo BENOIST-GIMET</Link>
-
-          <button className="menu-toggle" id="menuToggle">
-            <span className="hamburger"></span>
-            <span className="hamburger"></span>
-            <span className="hamburger"></span>
-          </button>
-
-          <ul className="nav-menu" id="navMenu">
-            <li><Link to="/" className="nav-link">Accueil</Link></li>
-            <li><Link to="/moi" className="nav-link">À propos</Link></li>
-            <li><Link to="/etudes" className="nav-link">Études</Link></li>
-            <li><Link to="/competences" className="nav-link">Compétences</Link></li>
-            <li><Link to="/experience" className="nav-link">Expérience</Link></li>
-            <li><Link to="/projets" className="nav-link">Projets</Link></li>
-            <li><Link to="/contact" className="nav-link active">Contact</Link></li>
-          </ul>
-        </nav>
-      </header>
-
+    <Layout>
       <main className="main-content">
         <section className="hero-contact">
           <div className="hero-contact-container">
@@ -52,7 +48,7 @@ export default function Contact() {
             <div className="hero-contact-visual">
               <div className="hero-contact-image">
                 <div style={{ width: '90%', height: '90%', borderRadius: '50%', background: 'var(--bg-dark)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '4rem', position: 'relative', zIndex: 2, color: 'var(--accent-color)' }}>
-                  <img src="./Images/moi6.png" style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} alt="Moi" />
+                  <img src={getAssetUrl('/src/assets/moi6.png')} style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} alt="Moi" />
                 </div>
               </div>
             </div>
@@ -102,27 +98,27 @@ export default function Contact() {
               <div className="form-grid">
                 <div className="form-group">
                   <label className="form-label" htmlFor="name">Nom *</label>
-                  <input type="text" id="name" name="name" className="form-input" required />
+                  <input type="text" id="name" name="name" className="form-input" value={formData.name} onChange={handleChange} required />
                 </div>
 
                 <div className="form-group">
                   <label className="form-label" htmlFor="email">Email *</label>
-                  <input type="email" id="email" name="email" className="form-input" required />
+                  <input type="email" id="email" name="email" className="form-input" value={formData.email} onChange={handleChange} required />
                 </div>
 
                 <div className="form-group">
                   <label className="form-label" htmlFor="entreprise">Entreprise *</label>
-                  <input type="text" id="entreprise" name="entreprise" className="form-input" required />
+                  <input type="text" id="entreprise" name="entreprise" className="form-input" value={formData.entreprise} onChange={handleChange} required />
                 </div>
 
                 <div className="form-group full-width">
                   <label className="form-label" htmlFor="subject">Objet du message *</label>
-                  <input type="text" id="subject" name="subject" className="form-input" required />
+                  <input type="text" id="subject" name="subject" className="form-input" value={formData.subject} onChange={handleChange} required />
                 </div>
 
                 <div className="form-group full-width">
                   <label className="form-label" htmlFor="message">Message *</label>
-                  <textarea id="message" name="message" className="form-textarea" required placeholder="Décrivez votre projet ou vos questions..."></textarea>
+                  <textarea id="message" name="message" className="form-textarea" value={formData.message} onChange={handleChange} required placeholder="Décrivez votre projet ou vos questions..."></textarea>
                 </div>
               </div>
 
@@ -136,10 +132,6 @@ export default function Contact() {
           </div>
         </section>
       </main>
-
-      <footer className="footer">
-        <p>&copy; 2026 Enzo BENOIST-GIMET</p>
-      </footer>
-    </>
+    </Layout>
   );
 }

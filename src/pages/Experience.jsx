@@ -1,34 +1,10 @@
-
-import { Link } from 'react-router-dom';
+import Layout from '../components/Layout';
+import { getAssetUrl } from '../utils/assetHelper';
 import '../styles/experience.css';
 
 export default function Experience() {
   return (
-    <>
-      <div className="particles" id="particles"></div>
-
-      <header className="header">
-        <nav className="nav-container">
-          <Link to="/" className="logo">Enzo BENOIST-GIMET</Link>
-
-          <button className="menu-toggle" id="menuToggle">
-            <span className="hamburger"></span>
-            <span className="hamburger"></span>
-            <span className="hamburger"></span>
-          </button>
-
-          <ul className="nav-menu" id="navMenu">
-            <li><Link to="/" className="nav-link">Accueil</Link></li>
-            <li><Link to="/moi" className="nav-link">À propos</Link></li>
-            <li><Link to="/etudes" className="nav-link">Études</Link></li>
-            <li><Link to="/competences" className="nav-link">Compétences</Link></li>
-            <li><Link to="/experience" className="nav-link active">Expérience</Link></li>
-            <li><Link to="/projets" className="nav-link">Projets</Link></li>
-            <li><Link to="/contact" className="nav-link">Contact</Link></li>
-          </ul>
-        </nav>
-      </header>
-
+    <Layout>
       <main className="main-content">
         <section className="hero-experience">
           <div className="hero-experience-container">
@@ -48,7 +24,7 @@ export default function Experience() {
             <div className="hero-experience-visual">
               <div className="hero-experience-image">
                 <div style={{ width: '90%', height: '90%', borderRadius: '50%', background: 'var(--bg-dark)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '3rem', position: 'relative', zIndex: 2 }}>
-                  <img src="./Images/moi5.png" style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} alt="Moi" />
+                  <img src={getAssetUrl('/src/assets/moi5.png')} style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} alt="Moi" />
                 </div>
               </div>
             </div>
@@ -106,10 +82,6 @@ export default function Experience() {
           </div>
         </section>
       </main>
-
-      <footer className="footer">
-        <p>&copy; 2026 Enzo BENOIST-GIMET</p>
-      </footer>
-    </>
+    </Layout>
   );
 }
