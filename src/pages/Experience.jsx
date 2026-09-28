@@ -33,52 +33,61 @@ export default function Experience() {
 
         <section className="timeline-section">
           <div className="section-container">
-            <ul className="timeline">
-              <li className="experience">
-                <div className="date">21 mai - 21 juin 2024</div>
-                <div className="content">
-                  <div className="title">Stagiaire en développement - Nexus/France (Bellerive-sur-Allier)</div>
-                  <div className="description">
-                    Ce premier stage m'a appris à travailler en équipe, et surtout à mettre en place un projet à partir d'un
-                    cahier des charges. J'ai également pu me familiariser avec les outils de développement de l'entreprise, ce qui m'a
-                    permis de mieux m'intégrer au contexte professionnel.
-                  </div>
-                  <div className="buttons">
-                    <a href="https://www.nexus-france.fr/" target="_blank" rel="noreferrer" className="experience-button">En savoir plus sur l'entreprise</a>
+            <div className="timeline">
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <div className="date">21 mai - 21 juin 2024</div>
+                  <div className="content">
+                    <div className="title">Stagiaire en développement - Nexus/France (Bellerive-sur-Allier)</div>
+                    <div className="description">
+                      Ce premier stage m'a appris à travailler en équipe, et surtout à mettre en place un projet à partir d'un
+                      cahier des charges. J'ai également pu me familiariser avec les outils de développement de l'entreprise, ce qui m'a
+                      permis de mieux m'intégrer au contexte professionnel.
+                    </div>
+                    <div className="buttons">
+                      <a href="https://www.nexus-france.fr/" target="_blank" rel="noreferrer" className="experience-button">En savoir plus sur l'entreprise</a>
+                    </div>
                   </div>
                 </div>
-              </li>
+              </div>
 
-              <li className="experience">
-                <div className="date">13 janvier - 21 février 2025</div>
-                <div className="content">
-                  <div className="title">Stagiaire en développement - Yansys (Vichy)</div>
-                  <div className="description">
-                    Ce deuxième stage m'a permis de renforcer mes acquis, mais également d'acquérir de nouvelles facultés.
-                    Cette nouvelle expérience m'a également permis de développer mes capacités d'adaptation face à un environnement dont je
-                    ne connais pas toutes les particularités.
-                  </div>
-                  <div className="buttons">
-                    <a href="https://yansys-medical.fr/" target="_blank" rel="noreferrer" className="experience-button">En savoir plus sur l'entreprise</a>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <div className="date">13 janvier - 21 février 2025</div>
+                  <div className="content">
+                    <div className="title">Stagiaire en développement - Yansys (Vichy)</div>
+                    <div className="description">
+                      Ce deuxième stage m'a permis de renforcer mes acquis, mais également d'acquérir de nouvelles facultés.
+                      Cette nouvelle expérience m'a également permis de développer mes capacités d'adaptation face à un environnement dont je
+                      ne connais pas toutes les particularités.
+                    </div>
+                    <div className="buttons">
+                      <a href="https://yansys-medical.fr/" target="_blank" rel="noreferrer" className="experience-button">En savoir plus sur l'entreprise</a>
+                    </div>
                   </div>
                 </div>
-              </li>
+              </div>
 
-              <li className="experience">
-                <div className="date">Depuis le 1er septembre 2025</div>
-                <div className="content">
-                  <div className="title">Développeur polyvalent en apprentissage - Fleurus (Bellerive-sur-Allier)</div>
-                  <div className="description">
-                    Nouvelle étape de mon parcours professionnel, cet apprentissage me permettra d'approfondir mes compétences techniques
-                    tout en poursuivant ma formation d'ingénieur : il s'agit d'une opportunité unique d'allier théorie et pratique dans un
-                    environnement professionnel stimulant.
-                  </div>
-                  <div className="buttons">
-                    <a href="https://www.fleurus.fr/" target="_blank" rel="noreferrer" className="experience-button">En savoir plus sur l'entreprise</a>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <div className="date">Depuis le 1er septembre 2025</div>
+                  <div className="content">
+                    <div className="title">Développeur polyvalent en apprentissage - Fleurus (Bellerive-sur-Allier)</div>
+                    <div className="description">
+                      Nouvelle étape de mon parcours professionnel, cet apprentissage me permettra d'approfondir mes compétences techniques
+                      tout en poursuivant ma formation d'ingénieur : il s'agit d'une opportunité unique d'allier théorie et pratique dans un
+                      environnement professionnel stimulant.
+                    </div>
+                    <div className="buttons">
+                      <a href="https://www.fleurus.fr/" target="_blank" rel="noreferrer" className="experience-button">En savoir plus sur l'entreprise</a>
+                    </div>
                   </div>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </section>
       </main>
