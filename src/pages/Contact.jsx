@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FaEnvelope, FaLinkedin, FaGithub, FaPaperPlane } from 'react-icons/fa';
 import Layout from '../components/Layout';
 import { getAssetUrl } from '../utils/assetHelper';
 import '../styles/contact.css';
@@ -60,7 +61,7 @@ Email : ${formData.email}`;
             <div className="contact-methods-grid">
               <a href="mailto:enzo.benoist-gimet@outlook.fr" className="contact-method-card" data-color="email">
                 <div className="contact-icon">
-                  <i className="fas fa-envelope"></i>
+                  <FaEnvelope />
                 </div>
                 <div className="contact-method-info">
                   <h3>Email</h3>
@@ -70,7 +71,7 @@ Email : ${formData.email}`;
 
               <a href="https://www.linkedin.com/in/enzobenoistgimet/" target="_blank" rel="noreferrer" className="contact-method-card" data-color="linkedin">
                 <div className="contact-icon">
-                  <i className="fab fa-linkedin"></i>
+                  <FaLinkedin />
                 </div>
                 <div className="contact-method-info">
                   <h3>LinkedIn</h3>
@@ -80,7 +81,7 @@ Email : ${formData.email}`;
 
               <a href="https://github.com/EnzoBG03" target="_blank" rel="noreferrer" className="contact-method-card" data-color="github">
                 <div className="contact-icon">
-                  <i className="fab fa-github"></i>
+                  <FaGithub />
                 </div>
                 <div className="contact-method-info">
                   <h3>GitHub</h3>
@@ -124,7 +125,7 @@ Email : ${formData.email}`;
 
               <div className="submit-container">
                 <button type="submit" className="submit-btn">
-                  <i className="fas fa-paper-plane" style={{ marginRight: '0.5rem' }}></i>
+                  <FaPaperPlane style={{ marginRight: '0.5rem' }} />
                   Envoyer le message
                 </button>
               </div>
